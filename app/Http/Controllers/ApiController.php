@@ -101,6 +101,7 @@ class ApiController extends Controller
         $returnArray['created_at'] = $collectionGet->created;
         $returnArray['status'] = $collectionGet->status;
         $returnArray['title'] = $collectionGet->summary;
+        $returnArray['description'] = $collectionGet->description;
         $returnArray['event_date_starts'] = $collectionGet->start->dateTime;
         $returnArray['event_date_ends'] = $collectionGet->end->dateTime;
         return $returnArray;
