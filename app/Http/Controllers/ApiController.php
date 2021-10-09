@@ -71,6 +71,7 @@ class ApiController extends Controller
                 array_push($eventsArray, $collection);
             }
         });
+        dd($eventsArray);
 
         return response(json_encode($eventsArray), 200);
     }
