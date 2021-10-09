@@ -611,6 +611,7 @@ class EventsController extends VoyagerBaseController
         
         $event = new Event();
         $event->name = $request->title;
+        $event->description = $request->description;
         $event->startDateTime = Carbon\Carbon::parse($request->event_date_starts);
         $event->endDateTime = Carbon\Carbon::parse($request->event_date_ends);
 
