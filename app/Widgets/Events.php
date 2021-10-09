@@ -6,7 +6,7 @@ use Arrilot\Widgets\AbstractWidget;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use TCG\Voyager\Facades\Voyager;
-use App\Models\team;
+use App\Models\Events as EventsModels;
 
 class Events extends AbstractWidget
 {
@@ -23,7 +23,7 @@ class Events extends AbstractWidget
      */
     public function run()
     {
-        $count = Events::count();
+        $count = EventsModels::count();
         $string = trans_choice('voyager::dimmer.post', $count);
         $KEYWORD = "events";
 
