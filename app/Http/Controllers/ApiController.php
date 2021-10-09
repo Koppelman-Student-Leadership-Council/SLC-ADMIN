@@ -84,6 +84,15 @@ class ApiController extends Controller
         return false;
     }
 
+    public function existsInDatabaseRes($title)
+    {
+        if (Events::where('title', $title)->count() > 0) {
+            // user found
+            return response("true", 200);;
+        }
+        return response("false", 200);;
+    }
+
     public function parseEvent($collectionGet)
     {
         $returnArray = Collect();
