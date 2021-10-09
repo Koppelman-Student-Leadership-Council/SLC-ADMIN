@@ -97,10 +97,12 @@ class ApiController extends Controller
     public function parseEvent($collectionGet)
     {
         $returnArray = Collect();
-        $returnArray['id'] = $collectionGet->id;
-        $returnArray['created'] = $collectionGet->created;
+        $returnArray['calendar_id'] = $collectionGet->id;
+        $returnArray['created_at'] = $collectionGet->created;
         $returnArray['status'] = $collectionGet->status;
-        $returnArray['summary'] = $collectionGet->summary;
+        $returnArray['title'] = $collectionGet->summary;
+        $returnArray['event_date_starts'] = $collectionGet->start->dateTime;
+        $returnArray['event_date_ends'] = $collectionGet->end->dateTime;
         return $returnArray;
     }
 
