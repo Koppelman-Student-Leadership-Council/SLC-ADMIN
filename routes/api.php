@@ -29,3 +29,4 @@ Route::get('/team/department/{department}', [ApiController::class, 'getTeamFromD
 
 Route::get('/events/title/{title}', [ApiController::class, 'getIndividualEvent']);
 Route::get('/googleapi-non', [ApiController::class, 'getGoogleEventsNotInDatabase']);
+Route::get('/googleapi-non/{title}', [ApiController::class, 'existsInDatabaseRes']);
