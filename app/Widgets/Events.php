@@ -23,7 +23,7 @@ class Events extends AbstractWidget
      */
     public function run()
     {
-        $count = Team::count();
+        $count = Events::count();
         $string = trans_choice('voyager::dimmer.post', $count);
         $KEYWORD = "events";
 
