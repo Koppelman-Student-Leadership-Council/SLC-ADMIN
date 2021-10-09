@@ -68,7 +68,8 @@ class ApiController extends Controller
 
         $e->each(function ($collection) use (&$eventsArray) {
             if (!$this->existsInDatabase($collection->summary)) {
-                array_push($eventsArray, $collection);
+                $returnArray = $this->parseEvent($collection);
+                array_push($eventsArray, $returnArray);
             }
         });
 
