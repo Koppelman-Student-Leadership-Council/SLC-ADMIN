@@ -25,7 +25,7 @@ Route::get('/team', [ApiController::class, 'getAllTeam']);
 
 Route::get('/googleapi', [ApiController::class, 'getGoogleEvents']);
 Route::get('/googleapi/title/{title}', [ApiController::class, 'getGoogleIndividualEvent']);
-Route::get('/team/department/{department}', [ApiController::class, 'getTeamFromDepartment']);
+Route::get('/team/department/{department}', [ApiController::class, 'getTeamFromDepartmentActive']);
 
 Route::get('/events/title/{title}', [ApiController::class, 'getIndividualEvent']);
 Route::get('/googleapi-non', [ApiController::class, 'getGoogleEventsNotInDatabase']);
