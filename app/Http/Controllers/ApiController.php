@@ -51,14 +51,6 @@ class ApiController extends Controller
         return response($response, 200);
     }
 
-    public function getGoogleEvents()
-    {
-        $e = Event::get();
-        // find e with specific name
-
-        $response = $e->toJson(JSON_PRETTY_PRINT);
-        return response($response, 200);
-    }
 
     public function getGoogleEventsNotInDatabase()
     {
