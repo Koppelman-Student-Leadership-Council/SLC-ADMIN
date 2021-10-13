@@ -60,6 +60,19 @@ class ApiController extends Controller
         return response($response, 200);
     }
 
+    public function getGoogleEventsParsed()
+    {
+        $e = Event::get();
+        // find e with specific name
+        $eventsArray = [];
+        $e->each(function ($collection) use (&$eventsArray) {
+            $returnArray = $this->parseEvent($collection);
+            array_push($eventsArray, $returnArray);
+        });
+
+        return response(json_encode($eventsArray), 200);
+    }
+
     public function getGoogleEventsNotInDatabase()
     {
         $e = Event::get();
@@ -89,9 +102,9 @@ class ApiController extends Controller
     {
         if (Events::where('title', $title)->count() > 0) {
             // user found
-            return response("true", 200);;
+            return response('true', 200);
         }
-        return response("false", 200);;
+        return response('false', 200);
     }
 
     public function parseEvent($collectionGet)
@@ -192,7 +205,9 @@ class ApiController extends Controller
     public function getTeamFromDepartmentActive($department)
     {
         // logic to get all students goes here
-        $team = Team::where('department', $department)->where('status', 'ACTIVE')->get();
+        $team = Team::where('department', $department)
+            ->where('status', 'ACTIVE')
+            ->get();
 
         $this->convertImageLinks($team);
 
