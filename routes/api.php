@@ -23,10 +23,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/events', [ApiController::class, 'getAllEvents']);
 Route::get('/team', [ApiController::class, 'getAllTeam']);
 
-Route::get('/googleapi', [ApiController::class, 'getGoogleEventsParsed']);
-Route::get('/googleapi/title/{title}', [ApiController::class, 'getGoogleIndividualEvent']);
+Route::get('/events-calendar', [ApiController::class, 'getGoogleEventsParsed']);
+Route::get('/events-calendar/title/{title}', [ApiController::class, 'getGoogleIndividualEvent']);
 Route::get('/team/department/{department}', [ApiController::class, 'getTeamFromDepartmentActive']);
 
 Route::get('/events/title/{title}', [ApiController::class, 'getIndividualEvent']);
-Route::get('/googleapi-non', [ApiController::class, 'getGoogleEventsNotInDatabase']);
-Route::get('/googleapi-non/{title}', [ApiController::class, 'existsInDatabaseRes']);
+Route::get('/events-calendar-non', [ApiController::class, 'getGoogleEventsNotInDatabase']);
+Route::get('/events-calendar-non/{title}', [ApiController::class, 'existsInDatabaseRes']);
