@@ -47,7 +47,10 @@ class ApiController extends Controller
     public function getAllEvents()
     {
         // logic to get all students goes here
-        $response = Events::get()->toJson(JSON_PRETTY_PRINT);
+        $events = Events::get();
+        
+        $this->convertImageLinks($events);
+        $response = $events->toJson(JSON_PRETTY_PRINT);
         return response($response, 200);
     }
 
@@ -180,6 +183,8 @@ class ApiController extends Controller
             $team[$i]->team_size = $teamSize;
         }
     }
+
+
     public function getAllTeam()
     {
         // logic to get all students goes here
