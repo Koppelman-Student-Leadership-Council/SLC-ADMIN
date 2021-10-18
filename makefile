@@ -6,7 +6,7 @@ cap:
 PAGE=ftp.brooklynslcouncil.com
 THIS_BRANCH=dev
 MASTER_BRANCH=master
-DEPLOY_BRANCH=deployment
+DEPLOY_BRANCH=official-key
 FTP_USER=admin_html@admin.brooklynslcouncil.com
 FTP_PASSWORD=ZA.m6e{,U6XG
 
