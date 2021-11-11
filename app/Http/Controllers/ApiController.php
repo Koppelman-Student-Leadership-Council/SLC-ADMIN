@@ -65,6 +65,9 @@ class ApiController extends Controller
 
     public function getGoogleEventsParsed()
     {
+
+
+        
         $e = Event::get();
         // find e with specific name
         $eventsArray = [];
