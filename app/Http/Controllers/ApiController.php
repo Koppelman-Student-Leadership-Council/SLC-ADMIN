@@ -199,7 +199,7 @@ class ApiController extends Controller
     public function getAllActiveTeam()
     {
         // logic to get all students goes here
-        $team = Team::where('status', 'ACTIVE')::get();
+        $team = Team::where('status', 'ACTIVE')->get();
 
         $this->convertImageLinks($team);
 
