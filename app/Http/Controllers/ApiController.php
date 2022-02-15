@@ -196,6 +196,17 @@ class ApiController extends Controller
         return response($response, 200);
     }
 
+    public function getAllActiveTeam()
+    {
+        // logic to get all students goes here
+        $team = Team::where('status', 'ACTIVE')::get();
+
+        $this->convertImageLinks($team);
+
+        $response = $team->toJson(JSON_PRETTY_PRINT);
+        return response($response, 200);
+    }
+
     public function getTeamFromDepartment($department)
     {
         // logic to get all students goes here
