@@ -23,6 +23,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/events', [ApiController::class, 'getAllEvents']);
 Route::get('/team', [ApiController::class, 'getAllTeam']);
 
+Route::get('/team/active', [ApiController::class, 'getAllActiveTeam']);
+
 Route::get('/events-calendar', [ApiController::class, 'getGoogleEventsParsed']);
 Route::get('/events-calendar/title/{title}', [ApiController::class, 'getGoogleIndividualEvent']);
 Route::get('/team/department/{department}', [ApiController::class, 'getTeamFromDepartmentActive']);
