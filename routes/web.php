@@ -15,9 +15,11 @@ use Spatie\GoogleCalendar\Event;
 */
 
 Route::get('/', function () {
-    $e = Event::get();
+    // $e = Event::get();
 
-    dd($e);
+    // dd($e);
+    
+    return redirect()->route('login');
 
     // return view('welcome');
 });
