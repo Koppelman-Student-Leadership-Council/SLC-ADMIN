@@ -19,7 +19,7 @@ Route::get('/', function () {
 
     // dd($e);
     
-    return redirect()->route('login');
+    return redirect('/admin');
 
     // return view('welcome');
 });
