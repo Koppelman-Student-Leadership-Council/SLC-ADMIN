@@ -4,7 +4,7 @@ cap:
 
    
 PAGE=ftp.brooklynslcouncil.com
-THIS_BRANCH=official-key
+THIS_BRANCH=master
 MASTER_BRANCH=master
 DEPLOY_BRANCH=deployment
 FTP_USER=admin_html@admin.brooklynslcouncil.com

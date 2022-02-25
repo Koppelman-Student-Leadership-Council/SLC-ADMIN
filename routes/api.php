@@ -22,6 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::get('/events', [ApiController::class, 'getAllEvents']);
 Route::get('/team', [ApiController::class, 'getAllTeam']);
+Route::get('/clubs', [ApiController::class, 'getAllClubs']);
 
 Route::get('/team/active', [ApiController::class, 'getAllActiveTeam']);
 
