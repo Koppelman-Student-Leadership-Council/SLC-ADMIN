@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Student;
 use App\Models\Events;
 use App\Models\Team;
+use App\Models\Club;
 use TCG\Voyager\Voyager;
 
 use Spatie\GoogleCalendar\Event;
@@ -51,6 +52,16 @@ class ApiController extends Controller
         
         $this->convertImageLinks($events);
         $response = $events->toJson(JSON_PRETTY_PRINT);
+        return response($response, 200);
+    }
+
+    public function getAllClubs()
+    {
+        // logic to get all students goes here
+        $clubs = Club::get();
+        
+        $this->convertImageLinks($clubs);
+        $response = $clubs->toJson(JSON_PRETTY_PRINT);
         return response($response, 200);
     }
 
