@@ -10,6 +10,17 @@ DEPLOY_BRANCH=deployment
 FTP_USER=slcadmin@admin.brooklynslcouncil.com
 FTP_PASSWORD=slcadmin
 
+merp:
+	git add -A
+	git commit -m "Deployment" 
+	git push origin HEAD
+	git merge ${MASTER_BRANCH}
+	git push origin HEAD
+	git checkout ${DEPLOY_BRANCH}
+	git pull
+	git merge ${THIS_BRANCH}
+	git push origin HEAD
+	git checkout ${THIS_BRANCH}
 
 merge-to-deployment:
 	git checkout ${DEPLOY_BRANCH}
