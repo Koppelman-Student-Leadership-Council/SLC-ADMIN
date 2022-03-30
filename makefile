@@ -7,8 +7,8 @@ PAGE=ftp.brooklynslcouncil.com
 THIS_BRANCH=official-key
 MASTER_BRANCH=master
 DEPLOY_BRANCH=deployment
-FTP_USER=admin_html@admin.brooklynslcouncil.com
-FTP_PASSWORD=ZA.m6e{,U6XG
+FTP_USER=slcadmin@admin.brooklynslcouncil.com
+FTP_PASSWORD=slcadmin
 
 
 merge-to-deployment:
