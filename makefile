@@ -3,7 +3,7 @@ cap:
 	git poh
 
    
-PAGE=ftp.brooklynslcouncil.com
+PAGE=192.254.225.2
 THIS_BRANCH=official-key
 MASTER_BRANCH=master
 DEPLOY_BRANCH=deployment
