@@ -14,8 +14,7 @@ merp:
 	git add -A
 	git commit -m "Deployment" 
 	git push origin HEAD
-	git merge ${MASTER_BRANCH}
-	git push origin HEAD
+	make ft-push
 	git checkout ${DEPLOY_BRANCH}
 	git pull
 	git merge ${THIS_BRANCH}
