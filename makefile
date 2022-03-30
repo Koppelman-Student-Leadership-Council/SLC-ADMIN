@@ -3,13 +3,23 @@ cap:
 	git poh
 
    
-PAGE=ftp.brooklynslcouncil.com
-THIS_BRANCH=master
+PAGE=192.254.225.2
+THIS_BRANCH=deployment
 MASTER_BRANCH=master
 DEPLOY_BRANCH=deployment
-FTP_USER=admin_html@admin.brooklynslcouncil.com
-FTP_PASSWORD=ZA.m6e{,U6XG
+FTP_USER=slcadmin@admin.brooklynslcouncil.com
+FTP_PASSWORD=slcadmin
 
+merp:
+	git add --all
+	git commit -m "Deployment" 
+	git push origin HEAD
+	make ft-push
+	git checkout ${DEPLOY_BRANCH}
+	git pull
+	git merge ${THIS_BRANCH}
+	git push origin HEAD
+	git checkout ${THIS_BRANCH}
 
 merge-to-deployment:
 	git checkout ${DEPLOY_BRANCH}
