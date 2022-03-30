@@ -11,7 +11,7 @@ FTP_USER=slcadmin@admin.brooklynslcouncil.com
 FTP_PASSWORD=slcadmin
 
 merp:
-	git add -A
+	git add --all
 	git commit -m "Deployment" 
 	git push origin HEAD
 	make ft-push
