@@ -33,3 +33,14 @@ Route::get('/team/department/{department}', [ApiController::class, 'getTeamFromD
 Route::get('/events/title/{title}', [ApiController::class, 'getIndividualEvent']);
 Route::get('/events-calendar-non', [ApiController::class, 'getAllEvents']);
 Route::get('/events-calendar-non/{title}', [ApiController::class, 'existsInDatabaseRes']);
+
+
+
+
+
+
+
+
+
+
+
