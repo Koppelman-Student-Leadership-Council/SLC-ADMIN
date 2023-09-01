@@ -12,3 +12,7 @@ composer update tcg/voyager
 ```
 
 
+Still having some errors on local. My guess tht the php is too much.
+
+
+
