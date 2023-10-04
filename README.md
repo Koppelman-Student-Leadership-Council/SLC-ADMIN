@@ -2,11 +2,7 @@
 
 ### This backend uses Laravel - Voyager
 
-
-For the credentials you may want to check into the discord server
-
-### Setting Up Locally
-
+### Setup
 
 If you have the new newest version of PHP you may want to isntall isntead from the following zip.
 
@@ -35,12 +31,3 @@ protected static function formatPrefix($new, $old, $prependExistingPrefix = true
     }
 }
 ```
-
-### Updating Packages
-
-```
-composer update tcg/voyager
-```
-
-
-
