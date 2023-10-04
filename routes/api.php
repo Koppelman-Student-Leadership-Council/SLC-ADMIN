@@ -20,7 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     
     return $request->user();
 });
-Route::get('/', [ApiController::class, 'index'])
+Route::get('/', [ApiController::class, 'index']);
 Route::get('/events', [ApiController::class, 'getAllEvents']);
 Route::get('/team', [ApiController::class, 'getAllTeam']);
 Route::get('/clubs', [ApiController::class, 'getAllClubs']);
