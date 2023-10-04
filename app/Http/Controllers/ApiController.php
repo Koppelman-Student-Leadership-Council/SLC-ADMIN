@@ -15,6 +15,11 @@ use Response;
 
 class ApiController extends Controller
 {
+    public function index(){
+        return response()->json([
+            'message' => 'Welcome to the API'
+        ], 200);
+    }
     //      public function getAllStudents() {
     //     // logic to get all students goes here
     //     $students = Student::get()->toJson(JSON_PRETTY_PRINT);
