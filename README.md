@@ -43,4 +43,17 @@ composer update tcg/voyager
 ```
 
 
+### Credentials
+
+```
+brooklynslcouncil@gmail.com
+Slcadmin2021
+```
+
+
+### Deployment
+
+1. To restart from zero
+2. Install Laravel from the admin
+3. Uncompress the following zip
 
