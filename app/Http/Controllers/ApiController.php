@@ -20,35 +20,6 @@ class ApiController extends Controller
             'message' => 'Welcome to the API'
         ], 200);
     }
-    //      public function getAllStudents() {
-    //     // logic to get all students goes here
-    //     $students = Student::get()->toJson(JSON_PRETTY_PRINT);
-    //     return response($students, 200);
-    //   }
-
-    //   public function createStudent(Request $request) {
-    //     // logic to create a student record goes here
-    //   }
-
-    //   public function getStudent($id) {
-    //     // logic to get a student record goes here
-    //     if (Student::where('id', $id)->exists()) {
-    //         $student = Student::where('id', $id)->get()->toJson(JSON_PRETTY_PRINT);
-    //         return response($student, 200);
-    //       } else {
-    //         return response()->json([
-    //           "message" => "Student not found"
-    //         ], 404);
-    //       }
-    //   }
-
-    //   public function updateStudent(Request $request, $id) {
-    //     // logic to update a student record goes here
-    //   }
-
-    //   public function deleteStudent ($id) {
-    //     // logic to delete a student record goes here
-    //   }
 
     public function getAllEvents()
     {
