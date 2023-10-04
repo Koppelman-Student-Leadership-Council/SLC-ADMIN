@@ -31,6 +31,7 @@ Route::get('/events-calendar/title/{title}', [ApiController::class, 'getGoogleIn
 Route::get('/team/department/{department}', [ApiController::class, 'getTeamFromDepartmentActive']);
 
 Route::get('/events/title/{title}', [ApiController::class, 'getIndividualEvent']);
+<<<<<<< HEAD
 Route::get('/events-calendar-non', [ApiController::class, 'getAllEvents']);
 Route::get('/events-calendar-non/{title}', [ApiController::class, 'existsInDatabaseRes']);
 
@@ -44,3 +45,7 @@ Route::get('/events-calendar-non/{title}', [ApiController::class, 'existsInDatab
 
 
 
+=======
+Route::get('/events-calendar-non', [ApiController::class, 'getGoogleEventsNotInDatabase']);
+Route::get('/events-calendar-non/{title}', [ApiController::class, 'existsInDatabaseRes']);
+>>>>>>> master
