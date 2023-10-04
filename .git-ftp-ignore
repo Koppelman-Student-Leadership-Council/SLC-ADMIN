@@ -1,6 +1,0 @@
-# Include the specific directory you want to upload
-!/routes
-!/app
-
-# Exclude everything else
-/*

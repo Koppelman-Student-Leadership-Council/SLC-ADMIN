@@ -1,2 +1,4 @@
 <?php
-header("https://admin.brooklynslcouncil.com/public/admin");
+header("Location: https://admin.brooklynslcouncil.com/public/admin");
+
+?>
