@@ -56,4 +56,10 @@ Slcadmin2021
 1. To restart from zero
 2. Install Laravel from the admin
 3. Uncompress the following zip
+4. Do your changes here and `make merp m='message'`
+
+In no specific order, just until it works to be honest.
+
+
+
 
